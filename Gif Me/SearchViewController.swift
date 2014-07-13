@@ -1,25 +1,27 @@
 //
-//  FirstViewController.swift
+//  SearchViewController.swift
 //  Gif Me
 //
-//  Created by jack.crawford-brown on 7/6/14.
+//  Created by jack.crawford-brown on 7/12/14.
 //  Copyright (c) 2014 JCB. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import CoreData
 
-class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-                            
-    @IBOutlet var gifCollection: UICollectionView
+
+class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet var searchTableView: UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView!) -> Int {
@@ -39,7 +41,5 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         return cell;
     }
-
-
 }
 
